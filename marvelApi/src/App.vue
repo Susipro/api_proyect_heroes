@@ -1,20 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-
+import Header from "./components/Header.vue";
 </script>
 
 <template>
   <header>
-    
-
-    <div class="wrapper">
-      <Header msg="Super Hero Web" />
-
+      <Header/>
       <nav>
         <RouterLink to="/">Inicio</RouterLink>
         <RouterLink to="/Favoritos">Favoritos</RouterLink>
       </nav>
-    </div>
   </header>
 
   <RouterView />
@@ -27,14 +22,17 @@ import { RouterLink, RouterView } from "vue-router";
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
-  font-weight: normal;
 }
 
 header {
-  line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.homeHeader{
+}
+
 
  
 
@@ -52,10 +50,8 @@ a,
 }
 
 nav {
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -80,15 +76,12 @@ nav a {
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    
   }
 
   header {
     display: flex;
     place-items: center;
-    padding-left: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {

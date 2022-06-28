@@ -14,3 +14,7 @@ export default {
     <p>{{ data.name }} / {{ data.alias[0] }} / {{ data.powerstats.combat }}</p>
   </div>
 </template>
+<style>
+div{
+}
+</style>
