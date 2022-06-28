@@ -1,7 +1,9 @@
 <template>
-  <div class="title">
-    <h1>Super Hero Web</h1>
-  </div>
+  <header>
+    <div class="title">
+      <h1>Super Hero Web</h1>
+    </div>
+  </header>
 </template>
 
 <script>

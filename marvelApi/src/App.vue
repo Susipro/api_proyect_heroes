@@ -1,17 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import Header from "./components/Header.vue";
+import Main from "./components/Main.vue"
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <header>
-      <Header/>
-      <nav>
-        <RouterLink to="/">Inicio</RouterLink>
-        <RouterLink to="/Favoritos">Favoritos</RouterLink>
-      </nav>
+    <nav>
+      <RouterLink to="/">Inicio</RouterLink>
+      <RouterLink to="/Favoritos">Favoritos</RouterLink>
+    </nav>
   </header>
-
+  
   <RouterView />
 </template>
 

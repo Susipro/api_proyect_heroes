@@ -13,11 +13,7 @@ const router = createRouter({
 		{
 			path: "/Favoritos",
 			name: "Favoritos",
-
-			// route level code-splitting
-			// this generates a separate chunk (Favoritos.[hash].js) for this route
-			// which is lazy-loaded when the route is visited.
-			component: () => import("../views/FavoritosView.vue"),
+			component: FavoritosView,
 		},
 	],
 });
