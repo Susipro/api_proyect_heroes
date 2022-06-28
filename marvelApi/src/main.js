@@ -1,3 +1,5 @@
+// NO MODIFICAR ESTE DOCUMENTO
+
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
