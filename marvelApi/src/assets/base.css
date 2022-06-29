@@ -12,6 +12,7 @@
 
 	--vt-c-green-light: #79EC9D;
 	--vt-c-green: #2DD671;
+	--vt-c-green-transparent: #42c4c493;
 	
 	--vt-c-red-light: #FF6A80;
 	--vt-c-red: #FF4757;
@@ -41,6 +42,8 @@
 	--color-text: var(--vt-c-black);
 
 	--color-background-card: var(--vt-c-white);
+	--color-background-card-transparent: var(--vt-c-green-transparent);
+
 
 	--color-iconStartEmpty: var(--vt-c-white);
 	--color-iconStart: var(--vt-c-blue);
