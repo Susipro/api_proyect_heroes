@@ -19,7 +19,7 @@ export default {
 </template>
 <style scoped >
   .color{
-    top:-25px;
+    top:-30px;
     background-color: rgba(41, 112, 112, 0.4) ;
     
    ;
