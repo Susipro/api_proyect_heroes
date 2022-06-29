@@ -32,6 +32,7 @@ header{
 h1 {
   font-weight: 500;
   font-size: 64px;
+  font-weight: bold;
 }
 .navBar{
   display:flex;
