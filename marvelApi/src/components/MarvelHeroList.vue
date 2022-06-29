@@ -15,7 +15,6 @@ export default {
 </script>
 
 <template>
-
   <div class="card" v-for="data in myMarvelData" :key="data.index">
 
     <img :src="data.images.sm" :alt="data.name" :title="data.name" :id="data.id">
@@ -37,10 +36,10 @@ export default {
     justify-content: space-between;
     align-items: baseline;
     top:-30px;
-    background-color: rgba(66, 168, 168, 0.7) ;
+    background-color: rgba(41, 112, 112, 0.4) ;
   }
 
-.color p{
+.color p {
   text-align:left;
   padding-left: 5px;
   top:0px;
@@ -54,5 +53,4 @@ export default {
 span{
   padding-right: 5px;
 }
-
 </style>
