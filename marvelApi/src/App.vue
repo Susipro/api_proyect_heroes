@@ -1,25 +1,21 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+
 </script>
 
 <template>
-  <header>
-      <Header/>
-      <nav>
-        <RouterLink to="/">Inicio</RouterLink>
-        <RouterLink to="/Favoritos">Favoritos</RouterLink>
-      </nav>
-  </header>
-
+  <Header></Header>
   <RouterView />
+  <Footer></Footer>
 </template>
 
 <style>
 @import "@/assets/base.css";
 
 #app {
-  max-width: 1280px;
+  max-width: 90vw;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -29,12 +25,6 @@ header {
   display: flex;
   justify-content: space-evenly;
 }
-
-.homeHeader{
-}
-
-
- 
 
 a,
 .green {
@@ -71,13 +61,6 @@ nav a {
 
 
 @media (min-width: 1024px) {
-  body {
-  
-  }
-
-  #app {
-    
-  }
 
   header {
     display: flex;
@@ -89,8 +72,7 @@ nav a {
     
    
   }
-  
-
+ 
   nav {
     text-align: right;
     margin-left: -1rem;
