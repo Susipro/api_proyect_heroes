@@ -11,9 +11,12 @@ import MarvelHeroList from "../components/MarvelHeroList.vue";
 
 <style>
 main{
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-around;
+  margin: auto;
+  gap: 10px;
 }
 
 </style>
