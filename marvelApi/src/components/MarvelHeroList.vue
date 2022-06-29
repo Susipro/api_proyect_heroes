@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="card" v-for="data in myMarvelData" :key=data.name>
+  <div class="card" v-for="data in myMarvelData" :key="data.name">
     <img v-bind:src="data.images.sm" alt="">
     <div class="color">
        <p>{{ data.name }}</p>
@@ -21,15 +21,10 @@ export default {
   .color{
     top:-30px;
     background-color: rgba(41, 112, 112, 0.4) ;
-    
-   ;
   }
-.color p{
+.color p {
   text-align:left;
   top:0px;
   color:solid black;
 }
-
- 
-
 </style>
