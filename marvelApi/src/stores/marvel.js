@@ -9,6 +9,7 @@ const marvelData = async() => {
       if (element.biography.publisher == "Marvel Comics") {
         myMarvel.push(
             {name:element.name,
+              id:element.id,
               alias:element.biography.aliases,
               values:0,
               favorites:false,
