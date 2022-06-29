@@ -18,6 +18,7 @@
   </div>
 
 </template>
+
 <style scoped >
   .color{
     top:-30px;
