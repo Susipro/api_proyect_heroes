@@ -11,10 +11,9 @@ export default {
 <template>
   <div v-for="data in myMarvelData" :key=data.name>
     <img v-bind:src="data.images.sm" alt="">
-    <p>{{ data.name }} / {{ data.alias[0] }} / {{ data.powerstats.combat }}</p>
+    <div class="color"></div>
+    <p>{{ data.name }}</p>
   </div>
 </template>
 <style>
-div{
-}
 </style>
