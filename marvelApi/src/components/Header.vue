@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import IconsHome from './Icons/IconsHome.vue';
-import IcosFavorites from './Icons/IcosFavorites.vue';
+import IconsFavorites from './Icons/IconsFavorites.vue';
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import IcosFavorites from './Icons/IcosFavorites.vue';
         </RouterLink>
 
         <RouterLink to="/Favoritos">
-          <IcosFavorites />
+          <IconsFavorites />
         </RouterLink>
       </nav>
     </div>
