@@ -1,31 +1,16 @@
-let myMarvel = new Array
-const marvelData = async() => {
-  try{
-    const response = await fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
-    const marvelJson = await response.json()
-    marvelJson.map(element=>{
-      if (element.biography.publisher == "Marvel Comics") {
-        myMarvel.push(
-            {name:element.name,
-              id:element.id,
-              alias:element.biography.aliases,
-              values:0,
-              favorites:false,
-            powerstats:{
-            intelligence:element.powerstats.intelligence,
-            strength:element.powerstats.strength,
-            speed:element.powerstats.speed,
-            durability:element.powerstats.durability,
-            power:element.powerstats.power,
-            combat:element.powerstats.combat},
-            images:{
-              sm:element.images.sm,
-              md:element.images.md}
-                }
-            )
+export default class marvelDataApi{
+
+    constructor(){
+        this.url = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json"
+    }
+
+    async getAllData(){
+        try{
+            const response = await fetch(this.url)
+            const marvelJson = await response.json()
+            return marvelJson      
+        } catch (error) {
+            console.log('Error : ' + error)
         }
-    })
-  }catch(error){
-  console.log('Error : ' + error)
-  }
+    }
 }
