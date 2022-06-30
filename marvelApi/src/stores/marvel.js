@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
 
+/*
 let myMarvel = new Array
 const marvelData = async() => {
   try{
@@ -33,11 +33,14 @@ const marvelData = async() => {
 }
 
 marvelData()
+*/
+import { defineStore } from 'pinia'
+import marvelFilterData from './marvelFilterData.js'
 
 export const useMarvelStore = defineStore({  // suele usarse use+NOMBRE+Store
   id: 'marvelApi',
   state:()=>({
-    myMarvelData: myMarvel,
+    myMarvelData: marvelFilterData,
   }),
 
   getters: {
