@@ -1,6 +1,6 @@
 <script setup>
-import MarvelHeroList from "../components/MarvelHeroList.vue";
-
+import MarvelHeroList from '../components/MarvelHeroList.vue';
+  
 </script>
 
 <template>
