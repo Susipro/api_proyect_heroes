@@ -6,23 +6,22 @@
 
 
 <script>
-export default{
-    
+export default {
+
 }
 </script>
 
 
 <style scoped>
-
-
-.boxFooter{
+.boxFooter {
     max-width: 100vw;
     max-height: 100px;
-    margin-top: 20px;
-    border-top: 2px solid black;
-    background-color: #f1f2f6;
+
+    border-top: 2px solid var(--color-background-pag);
+    background-color: var(--color-background);
 }
-h2{
+
+h2 {
     font-size: 32px;
     text-align: center;
 }
