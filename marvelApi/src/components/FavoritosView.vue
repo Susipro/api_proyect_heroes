@@ -1,6 +1,4 @@
 <template>
-
-
   <header>
     <h1>MY FAVORITE MARVEL HERO</h1>
   </header>
@@ -10,9 +8,9 @@
         <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
         <div class="color">
           <p>{{ data.name }}</p>
-          <icon @click="addFavorite(data)">
+          <span @click="addFavorite(data)">
             <IconsFavoritesRedHeart />
-          </icon>
+          </span>
         </div>
       </div>
     </div>
@@ -20,8 +18,7 @@
 </template>
 
 <script>
-
-import { mapState } from "pinia"
+import { mapState, mapActions } from "pinia"
 import { useMarvelStore } from "../stores/marvel.js";
 import IconsFavoritesRedHeart from "../components/Icons/IconsFavoritesRedHeart.vue";
 
@@ -35,6 +32,9 @@ export default {
     }
   },
   components: { useMarvelStore, IconsFavoritesRedHeart },
+  methods:{
+    ...mapActions(useMarvelStore,['addFavorite']),
+  }
 }
 </script>
 
@@ -80,7 +80,7 @@ img {
   border-radius: 1%;
 }
 
-icon {
+span {
   cursor: pointer;
 }
 
