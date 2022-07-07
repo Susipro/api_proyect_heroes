@@ -1,9 +1,26 @@
 <script setup>
-import TheWelcome from "@/components/TheWelcome.vue";
+import MarvelHeroList from '../components/MarvelHeroList.vue';
+import FavoritosView from '../components/FavoritosView.vue';
+import PopUpCard from '../components/PopUpCard.vue';
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <div id="homeSection">
+      <MarvelHeroList />
+    </div>
+    <div id="favoritesSection">
+      <FavoritosView />
+    </div>
+    <PopUpCard />
   </main>
+
 </template>
+
+<style>
+main {
+  width: 90vw;
+  margin: auto;
+}
+</style>

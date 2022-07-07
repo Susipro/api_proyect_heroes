@@ -1,0 +1,7 @@
+https://disneyapi.dev/
+https://swapi.dev/
+http://acnhapi.com/doc
+https://akabab.github.io/superhero-api/api/#alljson
+https://dog.ceo/dog-api/
+
+Selected: https://akabab.github.io/superhero-api/api/#alljson
