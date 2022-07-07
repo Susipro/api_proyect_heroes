@@ -1,22 +1,22 @@
 <template>
 
 
-    <header>
-      <h1>MY FAVORITE MARVEL HERO</h1>
-    </header>
-    <main>
-      <div class="horintotalScroll">
-        <div class="card" v-for="data in favoritesArray" :key="data.index">
-          <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
-          <div class="color">
-            <p>{{ data.name }}</p>
-            <icon @click="addFavorite(data)">
-              <IconsFavoritesRedHeart />
-            </icon>
-          </div>
+  <header>
+    <h1>MY FAVORITE MARVEL HERO</h1>
+  </header>
+  <main>
+    <div class="horintotalScroll">
+      <div class="card" v-for="data in favoritesArray" :key="data.index">
+        <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
+        <div class="color">
+          <p>{{ data.name }}</p>
+          <icon @click="addFavorite(data)">
+            <IconsFavoritesRedHeart />
+          </icon>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -39,13 +39,9 @@ export default {
 </script>
 
 <style scoped >
-
-
-
-
 @import '@/assets/base.css';
 
-h1{
+h1 {
   font-weight: 700;
   margin: 1rem auto;
 }
@@ -53,6 +49,7 @@ h1{
 main {
   width: 90vw;
   margin: auto;
+  margin-bottom: 2vw;
 }
 
 

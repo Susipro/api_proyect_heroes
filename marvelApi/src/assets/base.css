@@ -76,6 +76,10 @@
 	font-weight: normal;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-height: 100vh;
 	color: var(--color-text);
@@ -84,6 +88,7 @@ body {
 	line-height: 1.6;
 	font-family: "Comic Neue";
 	font-size: 15px;
+
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
