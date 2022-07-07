@@ -38,7 +38,7 @@
 
 	--color-text: var(--vt-c-black);
 
-	--color-background-card: var(--vt-c-white);
+	--color-background-card: var(--vt-c-white-light);
 	--color-background-card-transparent: var(--vt-c-green-transparent);
 
 	--color-iconStartEmpty: var(--vt-c-white);
