@@ -1,7 +1,6 @@
 <script>
 import { useMarvelStore } from "../stores/marvel.js";
 import IconsFavoritesGrayHeart from "./Icons/IconsFavoritesGrayHeart.vue";
-import FavoritosView from "../components/FavoritosView.vue";
 import marvelFilterData from '../js/marvelFilterData.js'
 import { mapActions } from "pinia";
 
@@ -11,7 +10,7 @@ export default {
       marvelData: []
     }
   },
-  components: { IconsFavoritesGrayHeart, FavoritosView, marvelFilterData },
+  components: { IconsFavoritesGrayHeart, marvelFilterData },
   methods: {
     ...mapActions(useMarvelStore, ['addFavorite']),
   },
@@ -19,7 +18,7 @@ export default {
     const handler = new marvelFilterData();
     const data = await handler.getData();
     this.marvelData = data;
-  },
+  }
 
 };
 </script>
@@ -34,9 +33,9 @@ export default {
         <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
         <div class="color">
           <p>{{ data.name }}</p>
-          <icon @click="addFavorite(data)">
+          <span @click="addFavorite(data)">
             <IconsFavoritesGrayHeart />
-          </icon>
+          </span>
         </div>
       </div>
     </div>
@@ -91,7 +90,7 @@ img {
   border-radius: 1%;
 }
 
-icon {
+span {
   cursor: pointer;
 }
 
