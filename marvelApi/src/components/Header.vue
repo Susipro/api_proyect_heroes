@@ -15,9 +15,9 @@ import IconsFavorites from "./Icons/IconsFavorites.vue";
           <IconsHome />
         </RouterLink>
 
-        <RouterLink to="/Favoritos">
+        <a href="#favoritesSection">
           <IconsFavorites />
-        </RouterLink>
+        </a>
       </nav>
     </div>
   </header>

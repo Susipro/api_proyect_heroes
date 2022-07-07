@@ -1,7 +1,7 @@
 <script>
 import { useMarvelStore } from "../stores/marvel.js";
 import IconsFavoritesGrayHeart from "./Icons/IconsFavoritesGrayHeart.vue";
-import FavoritosView from "../views/FavoritosView.vue";
+import FavoritosView from "../components/FavoritosView.vue";
 import marvelFilterData from '../js/marvelFilterData.js'
 import { mapActions } from "pinia";
 
@@ -22,14 +22,12 @@ export default {
   },
 
 };
-
-
 </script>
 
 <template>
-<header>
-  <h1>ALL MARVEL HEROES</h1>
-</header>
+  <header>
+    <h1>ALL MARVEL HEROES</h1>
+  </header>
   <main>
     <div class="horintotalScroll">
       <div class="card" v-for="data in marvelData" :key="data.index">
@@ -43,22 +41,16 @@ export default {
       </div>
     </div>
   </main>
-  <FavoritosView />
-
 </template>
 
 
 <style scoped >
-
-
-
 @import '@/assets/base.css';
-
-
 h1 {
   font-weight: 700;
   margin: 1rem auto;
 }
+
 .horintotalScroll {
   display: grid;
   grid-template-rows: 250px 250px;
@@ -99,7 +91,7 @@ img {
   border-radius: 1%;
 }
 
-icon{
+icon {
   cursor: pointer;
 }
 
