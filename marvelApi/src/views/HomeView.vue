@@ -13,7 +13,7 @@ import PopUpCard from '../components/PopUpCard.vue';
     <div id="favoritesSection">
       <FavoritosView />
     </div>
-    <PopUpCard />
+    <!-- <PopUpCard /> -->
   </main>
 
 </template>

@@ -71,6 +71,7 @@ export default {
   background-color: var(--color-background-card);
   display: flex;
   flex-direction: column;
+  color: var(--color-text);
 
 }
 
