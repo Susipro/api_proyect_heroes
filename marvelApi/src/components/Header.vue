@@ -1,7 +1,7 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import IconsHome from './Icons/IconsHome.vue';
-import IconsFavorites from './Icons/IconsFavorites.vue';
+import { RouterLink } from "vue-router";
+import IconsHome from "./Icons/IconsHome.vue";
+import IconsFavorites from "./Icons/IconsFavorites.vue";
 </script>
 
 <template>
@@ -11,36 +11,38 @@ import IconsFavorites from './Icons/IconsFavorites.vue';
     </div>
     <div class="navBar">
       <nav>
-
         <RouterLink to="/">
           <IconsHome />
         </RouterLink>
 
-        <RouterLink to="/Favoritos">
+        <a href="#favoritesSection">
           <IconsFavorites />
-        </RouterLink>
+        </a>
       </nav>
     </div>
   </header>
 </template>
 
 <style scoped>
-header{
-  border-bottom: 2px solid black;
-  background-color: #f1f2f6;
+@import "@/assets/base.css";
+
+header {
+  border-bottom: 2px solid var(--color-background-pag);
+  background: var(--color-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20vw;
 }
+
 h1 {
   font-weight: 500;
   font-size: 64px;
   font-weight: bold;
 }
-.navBar{
-  display:flex;
-  align-items: center;
-  left: 50px;
-}
+
 nav a {
   display: inline-block;
-  padding: 0 1.5rem;
+  padding: 0 2vw;
 }
 </style>

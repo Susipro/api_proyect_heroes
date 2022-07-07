@@ -1,93 +1,115 @@
 <script>
-// import { map } from "pinia";
 import { useMarvelStore } from "../stores/marvel.js";
 import IconsFavoritesGrayHeart from "./Icons/IconsFavoritesGrayHeart.vue";
-import FavoritosView from "../views/FavoritosView.vue";
+import FavoritosView from "../components/FavoritosView.vue";
 import marvelFilterData from '../js/marvelFilterData.js'
 import { mapActions } from "pinia";
 
 export default {
-  data(){
-    return{
-      marvelData:[]
+  data() {
+    return {
+      marvelData: []
     }
   },
-    components: { IconsFavoritesGrayHeart, FavoritosView, marvelFilterData },
-    methods:{
-      ...mapActions(useMarvelStore,['addFavorite']),
-    },
-    async created(){
-      const handler = new marvelFilterData();
-      const data = await handler.getData();
-      this.marvelData = data;
-    },
+  components: { IconsFavoritesGrayHeart, FavoritosView, marvelFilterData },
+  methods: {
+    ...mapActions(useMarvelStore, ['addFavorite']),
+  },
+  async created() {
+    const handler = new marvelFilterData();
+    const data = await handler.getData();
+    this.marvelData = data;
+  },
 
 };
-
-
 </script>
 
 <template>
-
-  <div class="horintotalScroll">
-    <div class="card" v-for="data in marvelData" :key="data.index">
-      <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
-      <div class="color">
-        <p>{{ data.name }}</p>
-        <icon @click="addFavorite(data)" >
-        <IconsFavoritesGrayHeart />
-        </icon>
+  <header>
+    <h1>ALL MARVEL HEROES</h1>
+  </header>
+  <main>
+    <div class="horintotalScroll">
+      <div class="card" v-for="data in marvelData" :key="data.index">
+        <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
+        <div class="color">
+          <p>{{ data.name }}</p>
+          <icon @click="addFavorite(data)">
+            <IconsFavoritesGrayHeart />
+          </icon>
+        </div>
       </div>
-    </div>  
-  </div>
-  <FavoritosView/>
-  
+    </div>
+  </main>
 </template>
 
 
 <style scoped >
+@import '@/assets/base.css';
+h1 {
+  font-weight: 700;
+  margin: 1rem auto;
+}
 
-  @import '@/assets/base.css';
-  .horintotalScroll{
-  
-    display: grid;
-    grid-template-rows: 250px 250px;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    gap: 10px;
-    row-gap: 10px;
-  } 
+.horintotalScroll {
+  display: grid;
+  grid-template-rows: 250px 250px;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+  row-gap: 10px;
+}
 
-  .horintotalScroll::-webkit-scrollbar {
-    width: 12px;
-  }
+.horintotalScroll::-webkit-scrollbar {
+  width: 12px;
+}
 
-  .horintotalScroll::-webkit-scrollbar-track {
-    background: transparent;
-  }
+.horintotalScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  .horintotalScroll::-webkit-scrollbar-thumb {
-    background-color: var(--color-iconHouese);
-    border-radius: 5px;
-  }
-  .color{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: baseline;
-      top:-30px;
-      background-color: var(--color-background-card-transparent);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
+.horintotalScroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-iconHouese);
+  border-radius: 5px;
+}
 
-  .color p {
-    text-align:left;
-    padding-left: 5px;
-    top:0px;
-    color: var(--color-text);
-    font-weight: 700;
-  }
+.card {
+  position: relative;
+  width: 9vw;
+  height: 13.5vw;
+  max-width: 160px;
+  max-height: 240px;
+  min-width: 80px;
+  min-height: 120px;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+}
+
+icon {
+  cursor: pointer;
+}
+
+.color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: var(--color-background-card-transparent);
+  border-radius: 1%;
+  padding: 0 0.4vw;
+}
+
+.color p {
+  color: var(--color-text);
+  font-weight: 700;
+}
 </style>

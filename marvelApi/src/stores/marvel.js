@@ -1,10 +1,10 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useMarvelStore = defineStore({ 
-  id: 'marvelFavoritesArray',
-  state:()=>({
-    favoritesArray:[]
-  }),
+export const useMarvelStore = defineStore({
+	id: "marvelFavoritesArray",
+	state: () => ({
+		favoritesArray: [],
+	}),
 
   getters: {
   },
@@ -21,7 +21,7 @@ export const useMarvelStore = defineStore({
         return
       }
       
-      },
+    },
 
     existArray(heroe){
       if (this.favoritesArray.includes(heroe)) {
