@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from "vue-router";
 import IconsHome from "./Icons/IconsHome.vue";
 import IconsFavorites from "./Icons/IconsFavorites.vue";
 </script>
@@ -11,9 +10,9 @@ import IconsFavorites from "./Icons/IconsFavorites.vue";
     </div>
     <div class="navBar">
       <nav>
-        <RouterLink to="/">
+        <a href="#homeSection">
           <IconsHome />
-        </RouterLink>
+        </a>
 
         <a href="#favoritesSection">
           <IconsFavorites />
@@ -27,11 +26,14 @@ import IconsFavorites from "./Icons/IconsFavorites.vue";
 @import "@/assets/base.css";
 
 header {
-  border-bottom: 2px solid var(--color-background-pag);
-  background: var(--color-background);
+  position: sticky;
+  top: 0;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid var(--color-background-pag);
+  background: var(--color-background);
   padding: 0 20vw;
 }
 

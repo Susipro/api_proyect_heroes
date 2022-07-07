@@ -6,7 +6,9 @@ import FavoritosView from '../components/FavoritosView.vue';
 
 <template>
   <main>
-    <MarvelHeroList />
+    <div id="homeSection">
+      <MarvelHeroList />
+    </div>
     <div id="favoritesSection">
       <FavoritosView />
     </div>
