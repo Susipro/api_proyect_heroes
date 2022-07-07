@@ -6,11 +6,47 @@ export const useMarvelStore = defineStore({
 		favoritesArray: [],
 	}),
 
-	getters: {},
+  getters: {
+  },
+  
+  actions: {
+    addFavorite(heroe){
+      if (this.emptyArray()) {
+        this.pushArray(heroe)
+        return
+      }
 
-	actions: {
-		addFavorite(heroe) {
-			this.favoritesArray.push(heroe);
-		},
-	},
-});
+      if (this.existArray(heroe)) {
+        this.pushArray(heroe)
+        return
+      }
+      
+    },
+
+    existArray(heroe){
+      if (this.favoritesArray.includes(heroe)) {
+        let posicion = this.favoritesArray.indexOf(heroe)
+        this.deleteArray(posicion)
+        return false
+      }
+      return true
+    },
+    
+    deleteArray(index){
+      this.favoritesArray.splice(index,1)
+      return
+    },
+
+    pushArray(heroe){
+      this.favoritesArray.push(heroe)
+      return
+    },
+
+    emptyArray(){
+      if (this.favoritesArray.length===0 ) {
+        return true
+      }
+      return false
+    }
+  }
+})
