@@ -5,7 +5,7 @@
     <h1>MY FAVORITE MARVEL HERO</h1>
   </header>
   <main>
-    <div class="horintotalScroll">
+    <div class="favoriteSection">
       <div class="card" v-for="data in favoritesArray" :key="data.index">
         <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id">
         <div class="color">
@@ -53,7 +53,7 @@ main {
 }
 
 
-.horintotalScroll {
+.favoriteSection {
   display: flex;
   flex-flow: row-reverse wrap-reverse;
   justify-content: flex-end;
