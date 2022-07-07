@@ -52,7 +52,7 @@
 	--color-iconHeartSelect: var(--vt-c-red);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: var(--vt-c-black);
 		--color-background-soft: var(--vt-c-black-soft);
@@ -65,7 +65,7 @@
 		--color-heading: var(--vt-c-grey-dark);
 		--color-text: var(--vt-c-white-light);
 	}
-}
+} */
 
 *,
 *::before,

@@ -1,6 +1,7 @@
 <script setup>
 import MarvelHeroList from '../components/MarvelHeroList.vue';
 import FavoritosView from '../components/FavoritosView.vue';
+import PopUpCard from '../components/PopUpCard.vue';
 
 </script>
 
@@ -12,7 +13,9 @@ import FavoritosView from '../components/FavoritosView.vue';
     <div id="favoritesSection">
       <FavoritosView />
     </div>
+    <!-- <PopUpCard /> -->
   </main>
+
 </template>
 
 <style>
