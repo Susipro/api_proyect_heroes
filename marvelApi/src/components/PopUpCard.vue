@@ -1,8 +1,9 @@
-<template>
+<template id="modal-template">
   <div class="card">
-    <p>{{ data.name }}</p>
+    <p>{{ favoritesArray[0].name }}</p>
     <div class="heroe">
-      <img :src="data.sm" :alt="data.name" :title="data.name" :id="data.id"></img>
+      <img :src="favoritesArray[0].sm" :alt="favoritesArray[0].name" :title="favoritesArray[0].name"
+        :id="favoritesArray[0].id" />
     </div>
     <div class="iconos">
       <IconsPencil />
@@ -15,51 +16,54 @@
       </div>
       <IconsFavoritesRedHeart />
     </div>
-    <div class="alias">Alias : {{ data.alias }}</div>
+    <div class="alias">Alias : {{ favoritesArray[0].alias }}</div>
     <div class="powerGeneral">
       <div class="powers">
         <p>Intelligence</p>
-        <progress value="{{favoritesArray.powerStats.intelligence}}" max="100" class="barra"></progress>
+        <progress :value="favoritesArray[0].intelligence" max="100" class="barra"></progress>
       </div>
       <div class="powers">
-        <p>Strengh</p>
-        <progress value=" {{favoritesArray.powerStats.Strengh}}" max="100" class="barra"></progress>
+        <p>strength</p>
+        <progress :value="favoritesArray[0].strength" max="100" class="barra"></progress>
 
       </div>
       <div class="powers">
         <p>Speed</p>
-
-        <progress value=" {{favoritesArray.powerStats.Speed}}" max="100" class="barra"></progress>
+        <progress :value="favoritesArray[0].speed" max="100" class="barra"></progress>
       </div>
       <div class="powers">
         <p>Durability</p>
-
-        <progress value=" {{favoritesArray.powerStats.Durability}}" max="100" class="barra"></progress>
+        <progress :value="favoritesArray[0].durability" max="100" class="barra"></progress>
       </div>
       <div class="powers">
         <p>Power</p>
-
-        <progress value=" {{favoritesArray.powerStats.Power}}" max="100" class="barra"></progress>
+        <progress :value="favoritesArray[0].power" max="100" class="barra"></progress>
       </div>
       <div class="powers">
         <p>Combat</p>
-
-        <progress value=" {{favoritesArray.powerStats.Combat}}" max="100" class="barra"></progress>
+        <progress :value="favoritesArray[0].combat" max="100" class="barra"></progress>
       </div>
     </div>
   </div>
 
 </template>
 
-<script setup>
+<script>
 import IconsStar from './Icons/IconsStar.vue';
 import IconsFavoritesRedHeart from './Icons/IconsFavoritesRedHeart.vue';
 import IconsPencil from './Icons/IconsPencil.vue';
+import { useMarvelStore } from '../stores/marvel.js';
+import { mapState } from 'pinia';
+export default {
+  computed: {
+    ...mapState(useMarvelStore, ["favoritesArray"])
+  }
+}
 </script>
 
 <style scoped>
-
 @import "../assets/base.css";
+
 .card {
   width: 420px;
   height: 800px;

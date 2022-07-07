@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid var(--color-background-pag);
-  background: var(--color-background);
+  background: white;
   padding: 0 20vw;
 }
 
